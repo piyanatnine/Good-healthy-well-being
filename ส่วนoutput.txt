@@ -27,5 +27,5 @@ Quite dangerous, There is a risk of being obese, diabetes and high blood pressur
 **If has BMI**
 We recommend you to (add/lose) weight for good health, Current you use energy (TDRR) kilocalories/day can control TDRR used/day (If add, +500/If lose, -500) kilocalories.
 
-**If hasn't BMT**
+**If hasn't BMI**
 urrent you use energy (TDRR) kilocalories/day
