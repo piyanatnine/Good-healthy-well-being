@@ -14,3 +14,18 @@ BMI
 (ถ้าเพิ่ม+500/ถ้าลด-500) กิโลแคลอรี่
 **กรณีไม่มีค่า**
 ปัจจุบันคุณใช้พลังงาน (ค่าTDRR)กิโลเเคลอรี่ต่อวัน 
+
+**If the user is in the age of less than 18 years old, the BMI will not be provided.**
+BMI
+-Too thin < 18.)
+Less weight than usual is not good. If very tall but weight so low. May be at risk of not receiving enough nutrients causing the body to be weak. Eating and wet training exercise Can help increase BMI to normal levels.
+-Normal weight ( 18.6 - 22.9 )
+BMI that is suitable for Thai people is between 18.5-22.9 is classified as normal. Have the least risk of disease
+-Fat ( > 30.0 )
+Quite dangerous, There is a risk of being obese, diabetes and high blood pressure.
+
+**If has BMI**
+We recommend you to (add/lose) weight for good health, Current you use energy (TDRR) kilocalories/day can control TDRR used/day (If add, +500/If lose, -500) kilocalories.
+
+**If hasn't BMT**
+urrent you use energy (TDRR) kilocalories/day
