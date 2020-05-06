@@ -5,11 +5,11 @@
 #include <math.h>
 //function call
 int age_Calculate(int month, int date, int year);
-float BMI_calculater(char gender, float height, float wight);
+float BMI_calculater(float height, float wight);
 float BMR_calculater(char gender, float height, float wight, int age);
 float TDEE_calculater(float bmr_point, int time);
-char Gender(char gender);
 void information_Form();
+void output(float bmi_point, float tdee_point);
 
 int main(){
     char choice[4];
@@ -71,6 +71,7 @@ void information_Form(){
     float bmi_point = BMI_calculater(user.height/100, user.wight);
     float bmr_point = BMR_calculater(user.gender, user.height, user.wight, user.age);
     float tdee_point = TDEE_calculater(bmr_point, user.excercics_time);
+    output(bmi_point, tdee_point);
 }
 
 int age_Calculate(int date, int month, int year){
@@ -120,4 +121,38 @@ float TDEE_calculater(float bmr_point, int time){
         tdee = 1.2*bmr_point;
     }
     return tdee;
+}
+
+void output(float bmi_point, float tdee_point){
+    printf("*************************************************\n");
+    printf("BMI: %.2f\n", bmi_point);
+    int recom = 0;
+    if (bmi_point >= 30){
+        recom = 1;
+        printf("Quite dangerous, It is at risk to be serious diseases associated with obesity.\nIf BMI is at this level, be careful of eating foods that are high in fat.\nyou should exercise regularly and if the BMI is higher than 40.0, It will show more of your obesity.\n");
+    }
+    else if (bmi_point >= 23){
+        recom = 1;
+        printf("Your weight to a lot extent.\nAlthough it's not up to the very fat level \nbut it also has a risk of obesity as well \nsuch as diabetes and high blood pressure\n");
+    }
+    else if(bmi_point >= 18.5){
+        recom = 0;
+        printf("BMI that is suitable for Thai people is between 18.5-22.9\nis classified as normal. Less risk to be obesity and other diseases.\nYou should keep your BMI at this level for as long as possible.\n");
+    }
+    else if (bmi_point < 18.5){
+        recom = -1;
+        printf("Less weight than usual is not good. If very tall but weight so low.\nMay be at risk of not receiving enough nutrients causing the body to be weak.\nEating and exercise weight training,it can help increase BMI to normal levels.\n");
+    }
+
+    if (recom == 1){
+        printf("We recommend you to add weight for good health,\nCurrently you use energy %.0f kilocalories/day \nyou can control TDRR used/day %.0f kilocalories.\n", tdee_point, tdee_point+500);
+    }
+
+    else if (recom == 0){
+        printf("currently you use energy %.0f kilocalories/day\n", tdee_point);
+    }
+
+    else if (recom == -1){
+        printf("We recommend you to lose weight for good health,\nCurrently you use energy %.0f kilocalories/day\nyou can control TDRR used/day %.0f kilocalories.\n", tdee_point, tdee_point-500);
+    }
 }
