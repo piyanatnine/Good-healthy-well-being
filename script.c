@@ -155,4 +155,12 @@ void output(float bmi_point, float tdee_point){
     else if (recom == -1){
         printf("We recommend you to lose weight for good health,\nCurrently you use energy %.0f kilocalories/day\nyou can control TDRR used/day %.0f kilocalories.\n", tdee_point, tdee_point-500);
     }
+
+    char choice;
+    printf("*************************************************\n");
+    printf("thank you for using!! you want to do again? [Y/N]\n");
+    scanf("%s", &choice);
+    if (choice == 'Y'){
+        main();
+    }
 }
